@@ -1,0 +1,45 @@
+
+public class ventana {
+
+	public static void main(String[] args) {
+		ventanas v1 = new ventanas();
+		v1.setVisible(true);
+		
+	}
+
+}
+/////////////
+package lukidofus3;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+public class ventanas extends JFrame {
+public ventanas () {
+	
+	this.setTitle("Mundial 2018");
+	setBounds(0,150,500,600);
+	setLocationRelativeTo(null);
+	setDefaultCloseOperation(EXIT_ON_CLOSE);
+	IniciarComponentes();
+}
+private void IniciarComponentes () {
+	JPanel Panel = new JPanel();
+	this.getContentPane().add(Panel);
+	Panel.setBackground(Color.white);
+	JLabel etiqueta = new JLabel("Mundial 2018");
+	Panel.setLayout(null);//desactivamos el diseño
+	Panel.add(etiqueta);
+	etiqueta.setBounds(100,20,200,50);
+	etiqueta.setForeground(Color.black);
+	etiqueta.setOpaque(true);
+	etiqueta.setBackground(Color.white);
+	etiqueta.setFont(new Font("Chiller",1,20));
+	JLabel etiqueta2=new JLabel(new ImageIcon("C:\\Users\\lucas\\Desktop\\Curso introduccion a html5 y css\\proyecto\\IMG\\computadora_escritorio.png"));
+	
+}
+}
